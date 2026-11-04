@@ -7,7 +7,7 @@ type Profile = { id:string; full_name:string; role:'admin'|'staff'; avatar_url?:
 type Attendance = { id:string; company_id:string; attendance_date:string; kind:'warehouse'|'excel'; confirmed_by:string; confirmed_at:string };
 type Audit = { id:string; action:'company_added'|'company_deleted'; details:string; created_at:string; actor_name?:string };
 const DAYS = ['السبت','الأحد','الإثنين','الثلاثاء','الأربعاء','الجمعة'];
-const GROUPS = ['شركات الجرشين','شركات الشويك'];
+const GROUPS = ['شركات البدرشين','شركات الشوبك'];
 const dateKey=(d:Date)=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 function startSaturday(d:Date){const x=new Date(d); x.setHours(0,0,0,0); x.setDate(x.getDate()-((x.getDay()+1)%7)); return x;}
 function addDays(d:Date,n:number){const x=new Date(d);x.setDate(x.getDate()+n);return x;}
